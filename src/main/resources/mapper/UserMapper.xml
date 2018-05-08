@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.demohot.homework.work0508.dao.UserMapper">
+
+	<resultMap type="com.demohot.homework.work0508.dao.po.User" id="userResultMap">
+		<id property="id" column="id" />
+		<result property="username" column="username" />
+		<result property="password" column="password" />
+		<result property="email" column="email" />
+	</resultMap>
+
+	<select id="selectUser" resultType="com.demohot.homework.work0508.dao.po.User">
+		select * from user
+	</select>
+
+</mapper>
